@@ -1,20 +1,20 @@
-const router = require('express').Router();
-const {
+// const router = require('express').Router();
+// const {
   
-} = require('../../controllers/thought-controller');
+// } = require('../../controllers/thought-controller');
 
-// /api/pizzas
-router
-  .route('/')
-  .get()
-  .post();
+// // /api/pizzas
+// router
+//   .route('/')
+//   .get()
+//   .post();
 
-// /api/pizzas/:id
-router
-  .route('/:id')
-  .get()
-  .put()
-  .delete();
+// // /api/pizzas/:id
+// router
+//   .route('/:id')
+//   .get()
+//   .put()
+//   .delete();
 
 
-module.exports = router;
+// module.exports = router;
