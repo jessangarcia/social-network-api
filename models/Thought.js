@@ -1,18 +1,26 @@
 const { Schema, model, Types } = require('mongoose');
-const moment = require('moment');
 
 const ReactionSchema = new Schema(
-    {
-
-    }
+    {}
 );
 
 const ThoughtSchema = new Schema(
     {
-        thoughtText: {},
-        createdAt: {},
-        username: {},
-        reactions: []
+        thoughtText: {
+            type: String,
+            required: true, 
+            minlength: 1, 
+            maxlength: 280
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now
+        },
+        username: {
+            type: String, 
+            required: true
+        },
+        reactions: [ReactionSchema]
 
     },
     {
