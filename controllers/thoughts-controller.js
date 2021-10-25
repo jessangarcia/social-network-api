@@ -17,7 +17,7 @@ const thoughtController = {
             });
     },
 
-    getThoughById({ params }, res) {
+    getThoughtById({ params }, res) {
         Thought.findOne({ _id: params.id })
             .populate({
                 path: 'user',
@@ -68,7 +68,7 @@ const thoughtController = {
             .catch(err => res.json(err));
     },
 
-    updateThought({ params, body }, res) {
+    updatedThought({ params, body }, res) {
         Thought.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then(dbThoughtData => {
                 if(!dbThoughtData) {
