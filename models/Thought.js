@@ -11,7 +11,6 @@ const ReactionSchema = new Schema(
         reactionBody: {
             type: String,
             required: true,
-            trim: true, 
             maxlength: 280
         },
         username: {
